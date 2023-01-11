@@ -1,0 +1,28 @@
+/* Q-1: Print All Subsequences
+Subsequences-> a contigious or non -contigious numbers which follow the order
+for example: [1, 2 ,3]
+and the subsequces are: [3],[1],[2],[1,2],[3,1],[3,1,2]
+Approach: pick and non pick 
+Algorithm:
+Step-1: Take one data structure like in java list 
+step-2: call a function by passing index as 0 and list
+step-3: add the array element into a list and then call a function by incrementing the index// here it comes to the picking part
+step-4:then remove that element from list 
+step-5: again call the function// here it comes to the non -pick part*/
+public class Subseq {
+    public static void main(String[] args){
+        int[] arr={3,1,2};
+        List<Integer> l= new ArrayList<>();
+        fun(arr,l,0);
+    }
+    public static void fun(int[] arr,List<Integer> l,int ind){
+        if(ind>=arr.length){
+                System.out.println(l);
+                return;
+        }
+        fun(arr,l,ind+1);// pick the element
+        l.add(arr[ind]);
+        fun(arr,l,ind+1);// not pick the element
+        l.remove(l.size()-1);// here you are backtraking to remove last element from the list
+    }
+}
