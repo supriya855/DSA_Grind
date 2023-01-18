@@ -14,3 +14,14 @@ step1: check if root is null return null
 step2: check if root val is equal to given val then return root val (as this is a condition)
 step3: check if val < root .val then call function by moving to root.left
 step4: check if val> root.val then call function by moving to root.right
+**************************************************************************
+Q-2: Ceil in BST
+you are given a root and key 
+Ceil means you have return a smallest value which is greater that or equal to key
+Floor means you have to return a greater value which is smaller than or equal to key
+Step1: traverse through a tree untill root not equal null
+step2: take ceil variable assign -1
+step3: if root val == key ceil=root val
+step4: if key< root.val then ceil=root.val move to root.left
+step-5: if key> root.val then move to root.right
+same process for floor step3 and 4 are reversed
