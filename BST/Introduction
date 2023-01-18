@@ -1,0 +1,16 @@
+BST- Binary Search Tree
+-> The left node should be less than root node and right node should be grater than root node 
+-> i.e L<root<R
+-> If we have duplicates then we can consider it as L<=root<=right
+-> the first condition should be applicable to every subtree in an binary search tree
+-> we are moving to binary serach tree to reduce Time Complexity how?
+-> where if you consider degenerate tree(skew tree) if you want to traverse through it takes lot of time i.e O(n) 
+where as in BST The height of BST is generally it is O(logn) coz because of the BST rule we are finding an element and searching that particular 
+element in a particular part
+********************************************
+Q-1: Search in BST:
+you are given a BST tree and then val you have to find the where the value is if value doesnot found we can return null
+step1: check if root is null return null
+step2: check if root val is equal to given val then return root val (as this is a condition)
+step3: check if val < root .val then call function by moving to root.left
+step4: check if val> root.val then call function by moving to root.right
