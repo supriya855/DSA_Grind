@@ -1,0 +1,22 @@
+We Have 3 types of traversals
+1. Inorder Traversal
+2. Preorder Traversal
+3. Postorder Traversal
++ Inorder Traversal :
+    -> left, root , right
+Recursive way:
+****************
+void inorder(Node root){
+if(root!=null){
+inorder(root.left);
+list.add(root.val);
+inorder(root.right);
+}
+Iterative Appraoch:
+step-1: Take a stack
+step-2: while(true) add the root to the stack
+step-3: check root.left is null if not add that val into stack move to next
+step-4: check if stack is empty break then pop the stack node and then root.right not null move to the next node
++ PreOrder
+Iterative Approach:
+
