@@ -8,6 +8,14 @@ BST- Binary Search Tree
 where as in BST The height of BST is generally it is O(logn) coz because of the BST rule we are finding an element and searching that particular 
 element in a particular part
 ********************************************
+Applications Of BST:
+********************************
+1. BST is used for easy seach in an efficient way
+2. It is used Database indexing
+3. It is used to implement the symbol tables
+4. It used to implemented in fast automation Systems.
+5. It used to store and quickly retrive the data
+**********************************************
 Q-1: Search in BST:
 you are given a BST tree and then val you have to find the where the value is if value doesnot found we can return null
 step1: check if root is null return null
