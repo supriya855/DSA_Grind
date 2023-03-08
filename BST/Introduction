@@ -15,6 +15,7 @@ Applications Of BST:
 3. It is used to implement the symbol tables
 4. It used to implemented in fast automation Systems.
 5. It used to store and quickly retrive the data
+6. used in spell check,priority queue, data catching
 **********************************************
 Q-1: Search in BST:
 you are given a BST tree and then val you have to find the where the value is if value doesnot found we can return null
