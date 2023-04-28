@@ -47,3 +47,28 @@ invertTree(4)
     root.left = 7
     root.right = 2
     return 4
+ *******************************************************************************
+ // BFS or Level Order Traversal
+ // you can do the same using stack data structure as linkedlist 
+ class Solution {
+    public TreeNode invertTree(TreeNode root) {
+       if(root==null) return root;
+        Queue<TreeNode> q= new LinkedList<>();
+        if(root!=null){
+            q.add(root);
+        }
+        while(!q.isEmpty()){
+           TreeNode node = q.remove();
+           TreeNode left = node.left;
+           node.left=node.right;
+           node.right=left;// swapped
+                if(node.left!=null){
+                    q.add(node.left);
+                }
+                if(node.right!=null){
+                    q.add(node.right);
+                }
+            }
+            return root;
+    }
+}
