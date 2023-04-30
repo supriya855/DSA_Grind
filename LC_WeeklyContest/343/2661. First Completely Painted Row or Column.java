@@ -18,3 +18,28 @@ class Solution {
         return -1;
     }
 }
+**********************************************************************
+class Solution {
+    public int firstCompleteIndex(int[] arr, int[][] mat) {
+       Map<Integer,Integer> map = new HashMap<>();
+        for(int i=0;i<arr.length;i++){
+            map.put(arr[i],i);
+        }
+        int ans=Integer.MAX_VALUE;
+        for(int i=0;i<mat.length;i++){
+            int currMin=0;
+            for(int j=0;j<mat[0].length;j++){
+                currMin=Math.max(currMin,map.get(mat[i][j]));
+            }
+            ans=Math.min(ans,currMin);
+        }
+        for(int j=0;j<mat[0].length;j++){
+            int currMin=0;
+            for(int i=0;i<mat.length;i++){
+                currMin=Math.max(currMin,map.get(mat[i][j]));
+            }
+            ans=Math.min(ans,currMin);
+        }
+        return ans;
+    }
+}
