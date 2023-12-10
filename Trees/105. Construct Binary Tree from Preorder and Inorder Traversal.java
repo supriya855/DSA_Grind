@@ -60,3 +60,27 @@ ________________________________________________________________________________
         return root; 
     }
 }
+_____________________________________________________________________________________________________________________________________
+  //This one uses hashmap and global varible to increment
+class Solution {
+    int pStart=0;
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        HashMap<Integer,Integer> map = new HashMap<>();
+        for(int i=0;i<inorder.length;i++){
+            map.put(inorder[i],i);
+        }
+        return buildBT(0,preorder.length-1,preorder,inorder,map);   
+    }
+    public TreeNode buildBT(int preStart,int preEnd,int[] preorder,int[]inorder,HashMap<Integer,Integer> map)  
+    {
+        if(preStart>preEnd||pStart>preorder.length){
+            return null;
+        }
+        TreeNode root= new TreeNode(preorder[pStart]);
+        int idx=map.get(preorder[pStart]);
+        pStart++;
+        root.left = buildBT(preStart,idx-1,preorder,inorder,map);
+        root.right=buildBT(idx+1,preEnd,preorder,inorder,map);
+        return root;
+    }
+}
