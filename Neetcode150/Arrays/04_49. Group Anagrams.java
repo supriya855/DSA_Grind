@@ -1,3 +1,4 @@
+//Got TLE for this but all test cases passed
 class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
          List<List<String>> res = new ArrayList<>();
@@ -34,3 +35,32 @@ class Solution {
         return true;
    }
 }
+=======================================================================================
+    class Solution {
+    public List<List<String>> groupAnagrams(String[] strs) {
+        Map<String,List<String>> map = new HashMap<>();
+        for(String s:strs){
+            char[] ch =s.toCharArray();
+            Arrays.sort(ch);
+            String keyStr= String.valueOf(ch);
+            if(!map.containsKey(keyStr)) map.put(keyStr,new ArrayList<>());
+            map.get(keyStr).add(s);
+        }
+        return new ArrayList<>(map.values());
+    }
+}
+=======================================================================================
+    class Solution {
+    public List<List<String>> groupAnagrams(String[] strs) {
+        Map<String,List<String>> map = new HashMap<>();
+        for(String s:strs){
+            char[] ch = new char[26];//instead of sort usig for less time complexity
+            for(char c:s.toCharArray()) ch[c-'a']++;
+            String keyStr= String.valueOf(ch);
+            if(!map.containsKey(keyStr)) map.put(keyStr,new ArrayList<>());
+            map.get(keyStr).add(s);
+        }
+        return new ArrayList<>(map.values());
+    }
+}
+====================================================================================================
