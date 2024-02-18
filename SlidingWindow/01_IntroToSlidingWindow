@@ -1,0 +1,65 @@
+Why Sliding window
+
+for ex: wheever if a problem given given to ask you to find subarray of size k=3 and find its max sum:
+
+Brute force : what we will do we traverse through the array two for loops and then we find it
+
+[2,3,4,5,1]
+subarrays of size 3 is 
+[2,3,4]= 9
+[3,4,5]=12
+[4,5,1]=10 
+return 12
+In the above example if you see 2+3+4 ==> 9 and again we are using prev 3+4+5 ==> 12 
+so here comes to the repetitve work to avoid that we are using sliding window 
+how we do this
+will remove one element from start and one elment from end
+
+Brute force
+class Solution{
+    static long maximumSumSubarray(int K, ArrayList<Integer> Arr,int N){
+        // code here
+        int max=0;
+        for(int i=0;i<Arr.size();i++){
+            int count=1,sum=0;
+            for(int j=i;j<Arr.size();j++){
+                if(i<=j&&count<=K){
+                    sum+=Arr.get(j);
+                    count++;
+                }
+                 max=Math.max(max,sum);
+            }
+        }
+        return max;
+    }
+}
+
+
+How to identify :
+arr or string +subarray/substring + window size or condition ==> window size means fixed sliding window else varible
+window size --> based on some condition return min or max subarray 
+[Max Sum Subarray of size K)](https://www.geeksforgeeks.org/problems/max-sum-subarray-of-size-k5313/1)
+
+
+class Solution{
+    static long maximumSumSubarray(int K, ArrayList<Integer> Arr,int N){
+        // code here
+        long max=0,sum=0;
+        int i=0,j=0;
+        while(j<Arr.size()){
+            sum+=Arr.get(j);//summing values 
+            if(j-i+1<K)
+            j++;
+            else if(j-i+1==K){//checking wheen its equal k 
+                max=Math.max(max,sum);// getting max
+                sum=sum-Arr.get(i);//removing start value
+                i++;
+                j++;
+                //i++,j++ moving the window;
+            }
+            
+        }
+        
+        return max;
+    }
+}
