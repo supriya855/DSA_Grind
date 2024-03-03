@@ -63,3 +63,41 @@ class Solution{
         return max;
     }
 }
+We have two types of sliding window:
+1. Fixed
+2. Variable
+-------------------------
+Fixed Size Sliding Window 
+--------------------------
+ How to identify the pattern in the question there will be substring/subarray with given size K 
+//Pattern
+int i=0,j=0;
+while(j<nums.length){
+//calucation
+if(j-i+1<k)j++;
+if(j-i+1==k){
+//removing the one adding another
+i++;
+j++;
+//moving the window
+}
+
+#varibale silidig window
+int i=0,j=0;
+while(j<nums.length){
+//caluculation we can use based on the caluculation or question either list or map whatever
+if(j-i+1<K) j++;
+else if(j-i+1==K){
+max=Math.max(max,sum or j-i+1);
+j++;
+}
+else if(j-i+1>k){
+while(j-i+1>k){
+//calucuation
+i++
+}
+j++;
+}
+}
+ 
+
