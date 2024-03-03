@@ -81,7 +81,12 @@ i++;
 j++;
 //moving the window
 }
+Q1. Maximum Sum Subarray of size K
+Q2. First -ve number in every window of size k
+Q3. Cout Occurences of Anagrams
+Q4. Maximum of all subarrays of size K
 
+--------------------------
 #varibale silidig window
 int i=0,j=0;
 while(j<nums.length){
@@ -99,5 +104,10 @@ i++
 j++;
 }
 }
+Q1. Largest Subarray of sum K
+Q2. Longest Substring with K unique characters
+Q3. Longest substring without repeating character (means all unique characters)
+Q4. Pick toys
+Q5. Minimum window substring
  
 
