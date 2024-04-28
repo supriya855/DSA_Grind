@@ -1,0 +1,38 @@
+1) What is the difference between a class and an object?
+  Object is an instantiation of a class
+  where class is a blue print
+2) What is the difference between a static and non-static method?
+  static method doesn't require an objects 
+  where as non static method requries an object creation
+3) What is the purpose of an interface in OOP?
+  Inteface is used to achieve the multiple inheritance
+4) Explain the 4 pillars of OOP.
+  - Inheritance -> where here we have parent class and child class all the properties parent class can be inheried by child class vice vers not possible
+  for EX: Two wheeler Vehicle --> parent class 
+          child class -> bike this bike class can inheri the properties vehicle  two wheels and disel/petrol
+child class <=> parent class
+derived class <=> Base class
+- Polymorphism -> where many operations the same method can perform different operation
+for sum (int a, int b) => sum (string a,int b), => sum(int a,int b,int c) 
+HERE we can acheive polymorphism by overloading and overrriding
+- abstraction -> it hides the data shows the  necessary information
+- encapsulation -> wrapping up the data into single unit
+          
+5) What is the difference between a public and private constructor
+ public -> which can be accessible any where untill execute file
+private -> which can be accessed only within the class
+6) What is the difference between an abstract class and an interface?
+ 
+7) What is the difference between a shallow copy and a deep copy?
+
+8) What is the role of the "this" keyword in OOP?
+9) What is a virtual function, and how is it implemented in OOP?
+10) What is the difference between overloading and overriding a method?
+11) What is an Abstract class?
+12) Explain different types of constructors.
+- default constructor 
+- parameterized constructor
+13) What is Coupling in OOP and why it is helpful?
+14) What is a destructor in OOP?
+15) What is a static keyword in Java?
+16) What is the difference between encapsulation and data abstraction?
