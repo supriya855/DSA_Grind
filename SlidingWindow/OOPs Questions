@@ -26,9 +26,11 @@ private -> which can be accessed only within the class
 7) What is the difference between a shallow copy and a deep copy?
 
 8) What is the role of the "this" keyword in OOP?
+
 9) What is a virtual function, and how is it implemented in OOP?
 10) What is the difference between overloading and overriding a method?
 11) What is an Abstract class?
+
 12) Explain different types of constructors.
 - default constructor 
 - parameterized constructor
@@ -36,3 +38,5 @@ private -> which can be accessed only within the class
 14) What is a destructor in OOP?
 15) What is a static keyword in Java?
 16) What is the difference between encapsulation and data abstraction?
+Encapsulation -> Wrapping up the data into single unit
+Abstraction -> where it only shows the necessary information and hides the unnesccary information
