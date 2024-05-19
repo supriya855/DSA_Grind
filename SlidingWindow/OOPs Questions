@@ -40,3 +40,6 @@ private -> which can be accessed only within the class
 16) What is the difference between encapsulation and data abstraction?
 Encapsulation -> Wrapping up the data into single unit
 Abstraction -> where it only shows the necessary information and hides the unnesccary information
+
+# Other than OOPS
+sharding -> not all your data fits on one server, so you have to split it up
