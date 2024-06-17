@@ -39,4 +39,21 @@ int prev2 =0, prev1=1;
     curri=prev1;
   }
   Sout(prev1);
-  
+  ====================
+WHen to apply dp
+when the problem says try to figure out all posssible ways.
+=> count or way of it we will applly recursion and to optimize we use DP
+
+SHORTCUT by STRIVER
+==================
+1. represent the problem in terms of index
+2. to all possible things on that index and according to the problem
+3. count all the ways = sum of all stuff /things
+ fnd min => minimum of all things
+
+EX : CLIMBING STAIRS
+1.   0 to n=> assuming all these are index
+2.  recursion if i think it should give all possible ways
+3. Base case is n<=1 return n;
+
+
