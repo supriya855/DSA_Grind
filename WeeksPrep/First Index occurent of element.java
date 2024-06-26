@@ -39,3 +39,24 @@ if(arr[s]==x) return s;
     return -1;
   }
 }
+
+
+
+============================================================(same intution easy clean written)===============================================
+    
+public static int findFirstOccurence(int[] arr, int x){
+int s=0, e= arr.length-1;
+int start = -1;
+if(arr[s]==x) return s;
+    while(s<=e){
+        int mid = (s+(e-s)/2);
+        if(arr[mid]==x){
+              start= mid;
+              e= mid-1;
+        }
+        else if(arr[mid]<x) s= mid+1;
+        else e = mid-1;
+    }
+    return start;
+  }
+}// just here they maintained one start variable
