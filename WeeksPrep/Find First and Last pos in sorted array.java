@@ -40,3 +40,24 @@ class Solution {
         return end;
     }
 }
+========================================================================
+class Solution {
+    public int[] searchRange(int[] nums, int target) {
+        if(nums.length<1 || nums==null) return new int[]{-1,-1};
+        int start = searchBinary(nums,target);
+        if(start == nums.length || nums[start]!=target) return new int[]{-1,-1};
+        int end = searchBinary(nums,target+1);// here we figure out the target +1 element idx and then we are returning end -1;
+        return new int[]{start, end-1};
+    }
+    public int searchBinary(int[] nums,int target){
+        int s= 0 , e= nums.length;
+        while(s<e){
+            int mid = s+(e-s)/2;
+            if(nums[mid]<target)
+            s = mid+1;
+            else 
+            e= mid;// why not mid-1 coz there mid itself a target
+        }
+        return s;
+    }
+}
