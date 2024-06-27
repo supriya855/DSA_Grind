@@ -5,3 +5,5 @@ Directed Graph Cycle["https://www.geeksforgeeks.org/problems/detect-cycle-in-a-d
 course schedule[https://www.geeksforgeeks.org/problems/prerequisite-tasks/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=prerequisite-tasks]
 
 course schedule II [https://www.geeksforgeeks.org/problems/course-schedule/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=course-schedule]
+
+Alien Dictionary[(https://www.geeksforgeeks.org/problems/alien-dictionary/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=alien-dictionary)]
