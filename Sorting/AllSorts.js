@@ -1,4 +1,5 @@
-INSERTION SORT => where it will sort the array in way that it consider the first element as sorted where it compares the othere elements and compare with first element and swaps like this goes
+INSERTION SORT => where it will sort the array in way that it consider the first element as sorted where it compares
+  the othere elements and compare with first element and swaps like this goes
 // pseudo code
 for(int i=1;i<nums.length;i++){
   int key = nums[i];
@@ -202,4 +203,97 @@ public class QuickSort {
 }
 
 
+// Merge Sort Using left[] right[]
+public class MergeSort {
+
+    // The main function that sorts the given array
+    public static void mergeSort(int[] array) {
+        if (array.length <= 1) {
+            return;
+        }
+        mergeSort(array, 0, array.length - 1);
+    }
+
+    // Helper function to perform merge sort on a subsection of the array
+    private static void mergeSort(int[] array, int left, int right) {
+        if (left < right) {
+            int middle = (left + right) / 2;
+
+            // Recursively sort the left half
+            mergeSort(array, left, middle);
+
+            // Recursively sort the right half
+            mergeSort(array, middle + 1, right);
+
+            // Merge the sorted halves
+            merge(array, left, middle, right);
+        }
+    }
+
+    // Function to merge two sorted subarrays into a single sorted array
+    private static void merge(int[] array, int left, int middle, int right) {
+        // Calculate the sizes of the two subarrays to be merged
+        int n1 = middle - left + 1;
+        int n2 = right - middle;
+
+        // Create temporary arrays to hold the subarrays
+        int[] leftArray = new int[n1];
+        int[] rightArray = new int[n2];
+
+        // Copy data into the temporary arrays
+        for (int i = 0; i < n1; i++) {
+            leftArray[i] = array[left + i];
+        }
+        for (int j = 0; j < n2; j++) {
+            rightArray[j] = array[middle + 1 + j];
+        }
+
+        // Merge the temporary arrays back into the original array
+        int i = 0, j = 0, k = left;
+        while (i < n1 && j < n2) {
+            if (leftArray[i] <= rightArray[j]) {
+                array[k] = leftArray[i];
+                i++;
+            } else {
+                array[k] = rightArray[j];
+                j++;
+            }
+            k++;
+        }
+
+        // Copy any remaining elements of leftArray, if any
+        while (i < n1) {
+            array[k] = leftArray[i];
+            i++;
+            k++;
+        }
+
+        // Copy any remaining elements of rightArray, if any
+        while (j < n2) {
+            array[k] = rightArray[j];
+            j++;
+            k++;
+        }
+    }
+
+    // Main function to test the merge sort implementation
+    public static void main(String[] args) {
+        int[] array = {38, 27, 43, 3, 9, 82, 10};
+        System.out.println("Original array:");
+        printArray(array);
+
+        mergeSort(array);
+
+        System.out.println("Sorted array:");
+        printArray(array);
+    }
+
+    // Utility function to print an array
+    public static void printArray(int[] array) {
+        for (int value : array) {
+            System.out.print(value + " ");
+        }
+        System.out.println();
+    }
+}
 
