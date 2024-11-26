@@ -11,6 +11,7 @@ for(int i=1;i<nums.length;i++){
   arr[j+1]= key;
 }
 }
+TC : O(n)	O(n2)	O(n2)	O(1)
 
 
 SELECTION SORT :  here we will sort the array based we will find the smallest element replace with its respective indicies
@@ -25,6 +26,7 @@ for(int i=0;i<nums.length;i++){
   arr[minIdx]=arr[i];
   arr[i]= temp;
 }
+Time Complexity : Best : O(n2)	Avergae : O(n2) 	Worst : O(n2) Space: 	O(1)
 
 BUBBLE SORT => it will swap the element untill the large element pops out to the right
 
@@ -40,6 +42,7 @@ boolean swapped = false;
  }
   if(swapped == false) break; or !swapped
 }
+TC: O(n)	O(n2)	O(n2)	O(1)
 
 
 
@@ -128,6 +131,7 @@ public class MergeSortWithTempArray {
         System.out.println();
     }
 }
+O(n log(n))	O(n log(n))	O(n log(n))	O(n)
 ===========================================================
 
 public class QuickSort {
@@ -201,7 +205,8 @@ public class QuickSort {
         System.out.println();
     }
 }
-
+O(n log(n))	O(n log(n))	O(n2)	O(n)
+============================================================
 
 // Merge Sort Using left[] right[]
 public class MergeSort {
