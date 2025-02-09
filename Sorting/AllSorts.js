@@ -131,7 +131,8 @@ public class MergeSortWithTempArray {
         System.out.println();
     }
 }
-O(n log(n))	O(n log(n))	O(n log(n))	O(n)
+Best : O(n log(n))	Avg : O(n log(n))	Worst : O(n log(n))
+Space : O(n)
 ===========================================================
 
 public class QuickSort {
@@ -205,7 +206,8 @@ public class QuickSort {
         System.out.println();
     }
 }
-O(n log(n))	O(n log(n))	O(n2)	O(n)
+Best : O(n log(n))	Avg : O(n log(n))	Worst :O(n2)	
+Space: O(n)
 ============================================================
 
 // Merge Sort Using left[] right[]
